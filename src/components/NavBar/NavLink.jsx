@@ -6,7 +6,7 @@ import React from 'react';
 
 const NavLink = ({href, children,className}) => {
   const pathName=usePathname()
-  const isActive= href === pathName;
+  const isActive= pathName=== href || (href==='/home' && pathName==='/');
   return (
     <div>
       <Link href={href} className={` ${isActive && ' text-[#fa3d3b]'} ${className}`}>{children}</Link>

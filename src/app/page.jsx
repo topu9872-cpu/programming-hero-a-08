@@ -1,9 +1,11 @@
-import React from 'react';
+import HomePage from "./home/page";
+
 
 const MainLayOutPage = () => {
+  
   return (
     <div>
-      
+      <HomePage/>
     </div>
   );
 };

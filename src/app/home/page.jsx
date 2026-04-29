@@ -1,9 +1,12 @@
+import HeroSection from '@/components/HeroSection/HeroSection';
+import MarqueeBar from '@/components/Marquee/Marquee';
 import React from 'react';
 
 const HomePage = () => {
   return (
     <div>
-      home page
+     <HeroSection/>
+     <MarqueeBar/>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Nosifer } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar/NavBar";
 import { ToastContainer } from "react-toastify";
@@ -7,11 +7,15 @@ import Footer from "@/components/Footer/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const nosifer = Nosifer({
+  variable: "--font-nosifer",
   subsets: ["latin"],
+  weight: "400",
+  display: "swap",
 });
 
 export default function RootLayout({ children }) {
@@ -19,17 +23,12 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       data-theme="dark"
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      className={`${geistSans.variable} ${nosifer.variable} antialiased`}
     >
-      <body className="min-h-screen flex flex-col">
+      <body className={`${geistSans.className} min-h-screen flex mx-auto justify-center flex-col`}>
         <NavBar />
-
         <ToastContainer />
-
-        <main className="flex-1">
-          {children}
-        </main>
-
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

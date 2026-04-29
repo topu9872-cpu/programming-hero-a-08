@@ -1,6 +1,6 @@
-'use client';
 
-import React from 'react';
+
+import { format } from "date-fns";
 import { FaFacebookF, FaTwitter, FaGithub, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
@@ -37,7 +37,7 @@ const Footer = () => {
       </div>
 
       <div className="text-center text-xs text-gray-500 border-t border-gray-700 py-3">
-        © {new Date().getFullYear()} MyBookStore. All rights reserved.
+        © {format(new Date(), "dd/MMM/yyyy")}; MyBookStore. All rights reserved.
       </div>
     </footer>
   );
