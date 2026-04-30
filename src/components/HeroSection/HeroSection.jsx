@@ -17,7 +17,7 @@ const HeroSection = () => {
         className="object-cover"
       />
 
-      <div className="hero-overlay  shadow-white bg-black/50 absolute inset-0"></div>
+      <div className="hero-overlay  shadow-white "></div>
 
       <div className="hero-content text-neutral-content relative z-10 w-full flex justify-start px-6 md:px-16">
         <div className="max-w-xl flex flex-col items-start text-left">

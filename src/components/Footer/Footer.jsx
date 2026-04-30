@@ -5,7 +5,7 @@ import { FaFacebookF, FaTwitter, FaGithub, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 pb-0 text-white mt-10">
+    <footer className=" bg-black text-white mt-6">
       <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
 
         {/* Brand */}
@@ -30,7 +30,7 @@ const Footer = () => {
             <FaFacebookF className="hover:text-blue-500 cursor-pointer" />
             <FaTwitter className="hover:text-sky-400 cursor-pointer" />
             <FaInstagram className="hover:text-pink-500 cursor-pointer" />
-            <FaGithub className="hover:text-gray-300 cursor-pointer" />
+            <FaGithub className="hover:text-white hover:bg-black rounded-full shadow-2xl cursor-pointer" />
           </div>
         </div>
 

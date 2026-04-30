@@ -1,0 +1,116 @@
+{
+  "Story": [
+    {
+      "id": 1,
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "description": "A quiet hobbit named Bilbo Baggins is drawn into an unexpected adventure to reclaim a lost dwarf kingdom from a powerful dragon.",
+      "category": "Story",
+      "available_quantity": 12,
+      "image_url": "https://covers.openlibrary.org/b/isbn/9780547928227-L.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Mockingbird",
+      "author": "Harper Lee",
+      "description": "A young girl grows up witnessing racial injustice as her father defends a wrongly accused man in a small Southern town.",
+      "category": "Story",
+      "available_quantity": 10,
+      "image_url": "https://covers.openlibrary.org/b/isbn/9780061120084-L.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "description": "A romantic and witty story exploring love, class, and misunderstandings in 19th-century England.",
+      "category": "Story",
+      "available_quantity": 9,
+      "image_url": "https://covers.openlibrary.org/b/isbn/9780141439518-L.jpg"
+    },
+    {
+      "id": 4,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "description": "A tragic tale of love and ambition set in the glamorous yet hollow world of the Jazz Age.",
+      "category": "Story",
+      "available_quantity": 8,
+      "image_url": "https://covers.openlibrary.org/b/isbn/9780743273565-L.jpg"
+    }
+  ],
+  "Tech": [
+    {
+      "id": 5,
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "description": "A guide to writing clean, maintainable, and efficient code using best practices.",
+      "category": "Tech",
+      "available_quantity": 20,
+      "image_url": "https://i.ibb.co.com/sdh4P8dF/13658134-5326329.jpg"
+    },
+    {
+      "id": 6,
+      "title": "The Pragmatic",
+      "author": "Andrew Hunt & David Thomas",
+      "description": "Practical advice for developers to improve coding, thinking, and problem-solving skills.",
+      "category": "Tech",
+      "available_quantity": 18,
+      "image_url": "https://covers.openlibrary.org/b/isbn/9780201616224-L.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Introduction to Algorithms",
+      "author": "Thomas H. Cormen",
+      "description": "A comprehensive textbook covering algorithms, data structures, and computational theory.",
+      "category": "Tech",
+      "available_quantity": 14,
+      "image_url": "https://covers.openlibrary.org/b/isbn/9780262033848-L.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Design Patterns",
+      "author": "Erich Gamma",
+      "description": "A foundational book introducing reusable design patterns for object-oriented programming.",
+      "category": "Tech",
+      "available_quantity": 16,
+      "image_url": "https://covers.openlibrary.org/b/isbn/9780201633610-L.jpg"
+    }
+  ],
+  "Science": [
+    {
+      "id": 9,
+      "title": "A Brief History of Time",
+      "author": "Stephen Hawking",
+      "description": "An accessible explanation of cosmology, black holes, and the nature of time.",
+      "category": "Science",
+      "available_quantity": 11,
+      "image_url": "https://covers.openlibrary.org/b/isbn/9780553380163-L.jpg"
+    },
+    {
+      "id": 10,
+      "title": "The Selfish Gene",
+      "author": "Richard Dawkins",
+      "description": "A gene-centered view of evolution explaining behavior and natural selection.",
+      "category": "Science",
+      "available_quantity": 10,
+      "image_url": "https://covers.openlibrary.org/b/isbn/9780199291151-L.jpg"
+    },
+    {
+      "id": 11,
+      "title": "The Elegant Universe",
+      "author": "Brian Greene",
+      "description": "An exploration of string theory and the hidden structure of the universe.",
+      "category": "Science",
+      "available_quantity": 9,
+      "image_url": "https://covers.openlibrary.org/b/isbn/9780393338102-L.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Cosmos",
+      "author": "Carl Sagan",
+      "description": "A journey through space and time exploring humanity`s place in the universe.",
+      "category": "Science",
+      "available_quantity": 13,
+      "image_url": "https://covers.openlibrary.org/b/isbn/9780345539434-L.jpg"
+    }
+  ]
+}
