@@ -1,5 +1,4 @@
-{
-  "Story": [
+ [
     {
       "id": 1,
       "title": "The Hobbit",
@@ -36,8 +35,7 @@
       "available_quantity": 8,
       "image_url": "https://covers.openlibrary.org/b/isbn/9780743273565-L.jpg"
     }
-  ],
-  "Tech": [
+  ,
     {
       "id": 5,
       "title": "Clean Code",
@@ -74,8 +72,7 @@
       "available_quantity": 16,
       "image_url": "https://covers.openlibrary.org/b/isbn/9780201633610-L.jpg"
     }
-  ],
-  "Science": [
+ ,
     {
       "id": 9,
       "title": "A Brief History of Time",
@@ -113,4 +110,3 @@
       "image_url": "https://covers.openlibrary.org/b/isbn/9780345539434-L.jpg"
     }
   ]
-}

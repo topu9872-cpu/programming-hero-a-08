@@ -1,3 +1,5 @@
+
+import DetailsBtn from '@/components/DetailsBtn/DetailsBtn';
 import Image from 'next/image';
 import React from 'react';
 
@@ -20,11 +22,9 @@ const AllCards = ({card}) => {
                 {card.title}
               </h2>
 
-              <div className="card-actions justify-center mt-4">
-                <button className="btn bg-[#fa3d3b] hover:bg-white hover:text-[#fa3d3b] text-white w-full">
-                  Details
-                </button>
-              </div>
+              
+                <DetailsBtn card={card}/>
+             
             </div>
           </div>
     </div>

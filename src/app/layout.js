@@ -5,6 +5,7 @@ import { ToastContainer } from "react-toastify";
 import Footer from "@/components/Footer/Footer";
 
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,12 +27,16 @@ export default function RootLayout({ children }) {
       data-theme="light"
       className={`${geistSans.variable} ${nosifer.variable} antialiased`}
     >
-      <body className={`${geistSans.className} min-h-screen flex mx-auto  justify-center flex-col`}>
-        <NavBar />
-        <ToastContainer />
+      <body
+        className={`${geistSans.className} min-h-screen flex mx-auto  justify-center flex-col`}
+      >
       
-        <main className="flex-1">{children}</main>
-        <Footer />
+          <NavBar />
+          <ToastContainer />
+
+          <main className="flex-1">{children}</main>
+          <Footer />
+        
       </body>
     </html>
   );
