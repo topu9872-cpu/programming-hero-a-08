@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       data-theme="light"
       className={`${geistSans.variable} ${nosifer.variable} antialiased`}
     >
-      <body className={`${geistSans.className} min-h-screen flex mx-auto justify-center flex-col`}>
+      <body className={`${geistSans.className} min-h-screen flex mx-auto  justify-center flex-col`}>
         <NavBar />
         <ToastContainer />
       
