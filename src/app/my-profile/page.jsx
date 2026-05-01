@@ -1,11 +1,20 @@
-import Image from 'next/image';
-import icon from '@/assets/icons8-profile.gif';
+// src/app/my-profile/page.jsx
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers"; // Import headers
+import ProfileForm from "@/components/ProfileForm/ProfileForm";
 
-const MyProfilePage = () => {
+const MyProfilePage = async () => {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  if (!session) return <div className="p-20 text-center">Denied</div>;
+
   return (
-    <div className='mx-auto text-center my-10'>
-   <span className='flex justify-center'> <Image src={icon} weidth={90} height={90} alt={'ds'} className='object-cover rounded-full'   /></span>
-    <h1 className='text-2xl pt-1 font-bold'>Name</h1>
+    <div className="min-h-screen bg-gray-50">
+      <main className="flex flex-col items-center py-20 px-4">
+        <ProfileForm user={session.user} />
+      </main>
     </div>
   );
 };

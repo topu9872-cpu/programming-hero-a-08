@@ -20,6 +20,12 @@ import { toast } from "react-toastify";
 const SingInPage =() => {
   const [isVisible, setIsVisible] = useState(false);
 
+const handleSignIn = async () => {
+  const data = await authClient.signIn.social({
+    provider: "google",
+  });
+};
+
   const handleSingUp = async (e) => {
     e.preventDefault();
 
@@ -101,12 +107,7 @@ if(error){
           </InputGroup>
         </TextField>
 <p className="opacity-40">write at least 6 leatters</p>
-        <div className="text-2xl font-bold  ">
-          <h1 className="border bg-blue-500 items-center flex justify-center  hover:bg-white hover:text-blue-500 border-blue-500 text-white rounded-full">
-            <Image src={gicon} width={30} height={30} alt="Google " />
-            oogle
-          </h1>
-        </div>
+        
         <div className="flex gap-2">
           <Button
             type="submit"
@@ -123,12 +124,22 @@ if(error){
             Reset
           </Button>
         </div>
+        <div className="text-2xl font-bold mx-auto  ">
+          <p className="text-sm text-center pb-2 opacity-80">or</p>
+          <button onClick={handleSignIn}
+             className="border bg-blue-500 items-center flex px-20  justify-center  hover:bg-white hover:text-blue-500 border-blue-500 text-white rounded-full">
+            <Image src={gicon} width={30} height={30} alt="Google " />
+            oogle
+          
+          </button>
+        </div>
         <h2 className="mx-auto font-medium text-sm">
           Don`t have account
           <Link href={"/signup"}>
             <span className="hover:underline"> Registration ?</span>
           </Link>
         </h2>
+        
       </Form>
     </div>
   );

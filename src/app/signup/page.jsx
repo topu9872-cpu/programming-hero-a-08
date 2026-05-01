@@ -19,6 +19,12 @@ import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 
 const SingUpPage = () => {
+  const handleSignUp = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+  };
+
   const router = useRouter();
   const {
     register,
@@ -39,7 +45,7 @@ const SingUpPage = () => {
 
     console.log(data, error);
     if (error) {
-    return  toast.error(error.message);
+      return toast.error(error.message);
     } else if (data) {
       toast.success("Singup is Successful");
       router.push("/signin");
@@ -96,19 +102,21 @@ const SingUpPage = () => {
         {errors.photo && (
           <span className="text-sm text-red-500">Photo is required</span>
         )}
-        <TextField className="w-full max-w-70"
-         validate={(value) => {
-          if (value.length < 6) {
-            return "Password must be at least 6 characters";
-          }
-          if (!/[a-z]/.test(value)) {
-            return "Password must contain at least one uppercase letter";
-          }
-          if (!/[0-9]/.test(value)) {
-            return "Password must contain at least one number";
-          }
-          return null;
-        }}>
+        <TextField
+          className="w-full max-w-70"
+          validate={(value) => {
+            if (value.length < 6) {
+              return "Password must be at least 6 characters";
+            }
+            if (!/[a-z]/.test(value)) {
+              return "Password must contain at least one uppercase letter";
+            }
+            if (!/[0-9]/.test(value)) {
+              return "Password must contain at least one number";
+            }
+            return null;
+          }}
+        >
           <Label>Password</Label>
           <InputGroup>
             <InputGroup.Input
@@ -139,15 +147,9 @@ const SingUpPage = () => {
           <span className="text-red-500 text-sm">
             {errors.password.message}
           </span>
-
         )}
         <p className="opacity-40">write at least 6 leatters</p>
-        <div className="text-2xl font-bold  ">
-          <h1 className="border bg-blue-500 items-center flex justify-center text-white rounded-full hover:bg-white hover:text-blue-500 border-blue-500">
-            <Image src={gicon} width={30} height={30} alt="Google " />
-            oogle
-          </h1>
-        </div>
+
         <div className="flex gap-2">
           <Button
             type="submit "
@@ -159,6 +161,16 @@ const SingUpPage = () => {
           <Button type="reset" variant="secondary">
             Reset
           </Button>
+        </div>
+        <div className="text-2xl font-bold mx-auto  ">
+          <p className="text-sm text-center pb-2 opacity-80">or</p>
+          <button
+            onClick={handleSignUp}
+            className="border bg-blue-500 items-center flex px-20  justify-center  hover:bg-white hover:text-blue-500 border-blue-500 text-white rounded-full"
+          >
+            <Image src={gicon} width={30} height={30} alt="Google " />
+            oogle
+          </button>
         </div>
       </Form>
     </div>

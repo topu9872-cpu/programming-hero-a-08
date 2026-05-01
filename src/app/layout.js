@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.className} min-h-screen flex mx-auto  justify-center flex-col`}
       >
-        <NavBar />
+      <NavBar/>
 
         <ToastContainer />
 
