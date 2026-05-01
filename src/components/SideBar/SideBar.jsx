@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 
-const Sidebar = () => {
+const Sidebar = ({ setCategoryId, categoryId }) => {
   const [open, setOpen] = useState(false);
   const [data, setData] = useState([]);
+
   useEffect(() => {
     fetch("/category.json")
       .then((res) => res.json())
@@ -25,7 +25,7 @@ const Sidebar = () => {
 
       <div
         className={`fixed top-0 left-0 h-full w-50 bg-black text-white p-5
-        transform transition-transform duration-500 z-50
+        transform transition-transform duration-300 z-50
         ${open ? "translate-x-0" : "-translate-x-full"}`}
       >
         <button onClick={() => setOpen(false)} className="text-sm mb-6">
@@ -35,10 +35,12 @@ const Sidebar = () => {
         <nav className="flex flex-col gap-4">
           {data.map((i) => (
             <div key={i.id}>
-            <Link href={''}>
-              
-              <span >{i.name}</span>
-            </Link>
+              <span
+                onClick={() => setCategoryId(i.name)}
+                className={`${categoryId === i.name && "text-[#fa3d3b]"} block`}
+              >
+                {i.name}
+              </span>
             </div>
           ))}
         </nav>
