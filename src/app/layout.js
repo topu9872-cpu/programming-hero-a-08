@@ -18,6 +18,11 @@ const nosifer = Nosifer({
   display: "swap",
 });
 
+export const metadata = {
+  title: "book-borrowing-platform/home",
+  description: "online-book-borrowing-platform",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html
