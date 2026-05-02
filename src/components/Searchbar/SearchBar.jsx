@@ -1,5 +1,5 @@
 "use client";
-import React, { useState} from "react";
+import React, { useState } from "react";
 import bookData from "../../../public/bookApi.json";
 import AllBooksPage from "@/app/all-books/page";
 
@@ -17,7 +17,6 @@ const SearchBar = () => {
 
     setFilteredBooks(filtered);
   };
-
   return (
     <div>
       <label className="input">

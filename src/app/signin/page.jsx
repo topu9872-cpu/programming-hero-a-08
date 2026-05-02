@@ -17,14 +17,14 @@ import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
 
-const SingInPage =() => {
+const SingInPage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-const handleSignIn = async () => {
-  const data = await authClient.signIn.social({
-    provider: "google",
-  });
-};
+  const handleSignIn = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+  };
 
   const handleSingUp = async (e) => {
     e.preventDefault();
@@ -32,17 +32,16 @@ const handleSignIn = async () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-const {data, error}=await authClient.signIn.email({
-  email,
-  password,
-  callbackURL:'/'
-})
-if(error){
-  toast.error(error.message)
-}else{
-  toast.success('Signin is Successfull')
-   
-}
+    const { data, error } = await authClient.signIn.email({
+      email,
+      password,
+      callbackURL: "/",
+    });
+    if (error) {
+      toast.error(error.message);
+    } else {
+      toast.success("Signin is Successfull");
+    }
   };
 
   return (
@@ -68,21 +67,22 @@ if(error){
           <Input placeholder="Enter Your Email" />
           <FieldError />
         </TextField>
-        <TextField className="w-full max-w-70" name="password"
-       validate={(value) => {
-          if (value.length < 6) {
-            return "Password must be at least 6 characters";
-          }
-          if (!/[A-Z]/.test(value)) {
-            return "Password must contain at least one uppercase letter";
-          }
-          if (!/[0-9]/.test(value)) {
-            return "Password must contain at least one number";
-          }
-          return null;
-        }}
+        <TextField
+          className="w-full max-w-70"
+          name="password"
+          validate={(value) => {
+            if (value.length < 6) {
+              return "Password must be at least 6 characters";
+            }
+            if (!/[A-Z]/.test(value)) {
+              return "Password must contain at least one uppercase letter";
+            }
+            if (!/[0-9]/.test(value)) {
+              return "Password must contain at least one number";
+            }
+            return null;
+          }}
         >
-
           <Label>Password</Label>
           <InputGroup>
             <InputGroup.Input
@@ -106,8 +106,8 @@ if(error){
             </InputGroup.Suffix>
           </InputGroup>
         </TextField>
-<p className="opacity-40">write at least 6 leatters</p>
-        
+        <p className="opacity-40">write at least 6 leatters</p>
+
         <div className="flex gap-2">
           <Button
             type="submit"
@@ -126,11 +126,12 @@ if(error){
         </div>
         <div className="text-2xl font-bold mx-auto  ">
           <p className="text-sm text-center pb-2 opacity-80">or</p>
-          <button onClick={handleSignIn}
-             className="border bg-blue-500 items-center flex px-20  justify-center  hover:bg-white hover:text-blue-500 border-blue-500 text-white rounded-full">
+          <button
+            onClick={handleSignIn}
+            className="border bg-blue-500 items-center flex px-20  justify-center  hover:bg-white hover:text-blue-500 border-blue-500 text-white rounded-full"
+          >
             <Image src={gicon} width={30} height={30} alt="Google " />
             oogle
-          
           </button>
         </div>
         <h2 className="mx-auto font-medium text-sm">
@@ -139,7 +140,6 @@ if(error){
             <span className="hover:underline"> Registration ?</span>
           </Link>
         </h2>
-        
       </Form>
     </div>
   );
