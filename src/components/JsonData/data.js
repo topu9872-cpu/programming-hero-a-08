@@ -1,6 +1,6 @@
 export const getBookData= async () => {
   try {
-    const res = await fetch('http://localhost:3000/bookApi.json', { 
+    const res = await fetch('https://online-book-borrowing-platform-v1.vercel.app/bookApi.json', { 
    cache:'no-store'
     });
 
@@ -14,7 +14,7 @@ export const getBookData= async () => {
 };
 export const getCategoryData= async () => {
   try {
-    const res = await fetch('http://localhost:3000/category.json', { 
+    const res = await fetch('https://online-book-borrowing-platform-v1.vercel.app/category.json', { 
       cache:'no-store'
     });
 
