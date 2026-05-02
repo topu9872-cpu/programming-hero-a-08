@@ -108,12 +108,12 @@ const SingUpPage = () => {
             if (value.length < 6) {
               return "Password must be at least 6 characters";
             }
-            if (!/[a-z]/.test(value)) {
-              return "Password must contain at least one uppercase letter";
-            }
-            if (!/[0-9]/.test(value)) {
-              return "Password must contain at least one number";
-            }
+            // if (!/[a-z]/.test(value)) {
+            //   return "Password must contain at least one uppercase letter";
+            // }
+            // if (!/[0-9]/.test(value)) {
+            //   return "Password must contain at least one number";
+            // }
             return null;
           }}
         >
