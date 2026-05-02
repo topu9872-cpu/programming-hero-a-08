@@ -43,15 +43,17 @@ const AllBooksHooks = () => {
 
   return (
     <>
+    
       <SearchBar search={search} setSearch={setSearch} />
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container rounded-2xl mx-auto space-y-4">
+<div className="flex justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  rounded-2xl justify-center space-y-4">
         {filteredBooks.map((card) => (
           <AllCards key={card.id} card={card} />
         ))}
       </div>
 
       <Sidebar setCategoryId={setCategoryId} categoryId={categoryId} />
+      </div>
     </>
   );
 };

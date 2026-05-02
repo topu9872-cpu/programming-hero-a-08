@@ -23,10 +23,11 @@ console.log(name)
   };
 
   return (
-    <div className="shadow-sm navbar px-4 flex justify-around items-center py-3">
+    <div>
+    <div className="shadow-sm navbar  px-4 flex justify-around items-center py-3">
       <div className="pl-6 md:pl-3">
         <NavLink
-          className="text-nowrap text-xs md:text-2xl lg:text-2xl font-bold  font-['Nosifer'] text-[#fa3d3b]"
+          className="text-nowrap text-xs md:text-2xl lg:text-2xl font-bold  font-['Nosifer'] hidden sm:flex text-[#fa3d3b]"
           href="/home"
         >
           BookBorrow
@@ -74,6 +75,7 @@ console.log(name)
           </button>
         </div>
       )}
+    </div>
     </div>
   );
 };
