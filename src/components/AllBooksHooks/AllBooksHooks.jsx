@@ -37,7 +37,7 @@ const AllBooksHooks = () => {
   if (loading)
     return (
       <p>
-        <span className="loading loading-spinner loading-xl"></span>
+        <span className="loading loading-spinner loading-xl mx-auto items-center flex justify-center"></span>
       </p>
     );
 
@@ -46,7 +46,7 @@ const AllBooksHooks = () => {
     
       <SearchBar search={search} setSearch={setSearch} />
 <div className="flex justify-center">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  rounded-2xl justify-center space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  rounded-2xl justify-center">
         {filteredBooks.map((card) => (
           <AllCards key={card.id} card={card} />
         ))}

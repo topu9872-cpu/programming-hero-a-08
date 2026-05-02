@@ -8,8 +8,8 @@ const db = client.db("online_book_borrowing_db");
 
 export const auth = betterAuth({
   trustedOrigins: [
-    "http://localhost:3000",
-    "https://online-book-borrowing-platform-v1-68c0r3jc3.vercel.app",
+    
+    "https://online-book-borrowing-platform-v1.vercel.app",
   ],
 
   database: mongodbAdapter(db, { client }),

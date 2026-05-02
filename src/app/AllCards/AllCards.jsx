@@ -6,7 +6,8 @@ import React from "react";
 const AllCards = ({ card }) => {
   return (
     <>
-      <div className="hover-3d ">
+      <div className="hover-3d m-4">
+        
         <div className=" h-full text-nowrap hover:shadow-[ 20 20] hover:shadow-[#fa3d3b] w-60 pt-5 bg-base-100 shadow-2xl mt-6 rounded-2xl">
           <figure>
             <Image
