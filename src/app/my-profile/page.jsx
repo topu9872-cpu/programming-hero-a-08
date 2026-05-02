@@ -1,6 +1,6 @@
 // src/app/my-profile/page.jsx
 import { auth } from "@/lib/auth";
-import { headers } from "next/headers"; // Import headers
+import { headers } from "next/headers"; 
 import ProfileForm from "@/components/ProfileForm/ProfileForm";
 
 const MyProfilePage = async () => {
