@@ -29,7 +29,7 @@ const HeroSection = () => {
             stories that <br /> move you and the knowledge that empowers you.
           </p>
           <Link href={"/all-books"}>
-            <button className="btn bg-[#fa3d3b] hover:text-[#d93432] hover:bg-white text-white border-none shadow-2xl rounded-full font-bold p-4 ">
+            <button className="btn bg-[#fa3d3b] animate__animated animate__bounce animate__delay-2s hover:text-[#d93432] hover:bg-white text-white border-none shadow-2xl rounded-full font-bold p-4 ">
               BROWSE NOW
             </button>
           </Link>

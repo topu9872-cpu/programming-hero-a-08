@@ -19,7 +19,7 @@ React icons
 React form
 Herogravity
 eact-fast-marquee
-
+animate.CSS
 
     **User Authentication:** Secure login and registration using Better-Auth.
 
