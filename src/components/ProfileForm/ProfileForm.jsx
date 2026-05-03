@@ -18,7 +18,7 @@ const ProfileForm = ({ user }) => {
 
   return (
     <div className="w-full max-w-md bg-white p-8 rounded-[2rem] shadow-sm flex flex-col items-center border">
-      {/* Image Upload Area */}
+    
       <label className="relative cursor-pointer mb-6 active:scale-95 group">
         <Image
           src={u.img || icon}

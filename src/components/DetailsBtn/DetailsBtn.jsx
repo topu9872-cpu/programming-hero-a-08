@@ -7,7 +7,7 @@ const DetailsBtn = ({ card }) => {
   const router = useRouter();
 const session=authClient();
 if(!session){
-  toast.error('Signin')
+return toast.error('Lognin')
 }
   
   return (

@@ -12,7 +12,7 @@ const MyProfilePage = async () => {
   });
 
   if (!session){
-toast.error('Lognin')
+return toast.error('Lognin')
   } 
   return (
     <div className="min-h-screen bg-gray-50">
