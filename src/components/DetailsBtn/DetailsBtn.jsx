@@ -1,9 +1,15 @@
 'use client'
+import { authClient } from '@/lib/auth-client';
 import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
 
 const DetailsBtn = ({ card }) => {
   const router = useRouter();
-
+const session=authClient();
+if(!session){
+  toast.error('Signin')
+}
+  
   return (
     <div className="card-actions justify-center mt-4">
       <button

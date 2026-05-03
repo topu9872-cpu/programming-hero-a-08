@@ -14,7 +14,7 @@ const DetailsPage = async ({ params }) => {
     return (
       <div className="container mt-6 mx-auto">
         <h1 className="text-xl">Book not found</h1>
-        <Link href="/" className="text-blue-500 underline">
+        <Link href="/" className="text-[#fa3d3b] underline">
           Return Home
         </Link>
       </div>

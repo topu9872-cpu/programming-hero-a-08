@@ -4,13 +4,16 @@ import { headers } from "next/headers";
 import ProfileForm from "@/components/ProfileForm/ProfileForm";
 import { BiLeftArrowAlt } from "react-icons/bi";
 import Link from "next/link";
+import { toast } from "react-toastify";
 
 const MyProfilePage = async () => {
   const session = await auth.api.getSession({
     headers: await headers(),
   });
 
-  if (!session) return <div className="p-20 text-center">Denied</div>;
+  if (!session){
+toast.error('Lognin')
+  } 
   return (
     <div className="min-h-screen bg-gray-50">
       

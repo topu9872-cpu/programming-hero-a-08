@@ -105,8 +105,8 @@ const SingUpPage = () => {
         <TextField
           className="w-full max-w-70"
           validate={(value) => {
-            if (value.length < 6) {
-              return "Password must be at least 6 characters";
+            if (value.length < 8) {
+              return "Password must be at least 8 characters";
             }
             // if (!/[a-z]/.test(value)) {
             //   return "Password must contain at least one uppercase letter";
@@ -148,7 +148,7 @@ const SingUpPage = () => {
             {errors.password.message}
           </span>
         )}
-        <p className="opacity-40">write at least 6 leatters</p>
+        <p className="opacity-40">write at least 8 leatters</p>
 
         <div className="flex gap-2">
           <Button

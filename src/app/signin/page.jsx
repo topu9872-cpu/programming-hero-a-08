@@ -71,8 +71,8 @@ const SingInPage = () => {
           className="w-full max-w-70"
           name="password"
           validate={(value) => {
-            if (value.length < 6) {
-              return "Password must be at least 6 characters";
+            if (value.length < 8) {
+              return "Password must be at least 8 characters";
             }
             // if (!/[A-Z]/.test(value)) {
             //   return "Password must contain at least one uppercase letter";
@@ -106,7 +106,7 @@ const SingInPage = () => {
             </InputGroup.Suffix>
           </InputGroup>
         </TextField>
-        <p className="opacity-40">write at least 6 leatters</p>
+        <p className="opacity-40">write at least 8 leatters</p>
 
         <div className="flex gap-2">
           <Button
