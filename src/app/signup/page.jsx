@@ -164,7 +164,7 @@ const SingUpPage = () => {
         </div>
         <div className="text-2xl font-bold mx-auto  ">
           <p className="text-sm text-center pb-2 opacity-80">or</p>
-          <button
+          <button type="button"
             onClick={handleSignUp}
             className="border bg-blue-500 items-center flex px-20  justify-center  hover:bg-white hover:text-blue-500 border-blue-500 text-white rounded-full"
           >
