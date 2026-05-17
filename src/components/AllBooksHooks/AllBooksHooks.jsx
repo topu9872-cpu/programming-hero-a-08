@@ -46,7 +46,7 @@ const AllBooksHooks = () => {
     
       <SearchBar search={search} setSearch={setSearch} />
 <div className="flex justify-center">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  rounded-2xl justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  rounded-2xl justify-center">
         {filteredBooks.map((card) => (
           <AllCards key={card.id} card={card} />
         ))}

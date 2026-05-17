@@ -2,16 +2,13 @@ import { betterAuth } from "better-auth";
 import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 
-const client = new MongoClient(process.env.MONGO_URL);
-
+const client = new MongoClient(process.env.MONGODB_URI);
 const db = client.db("online_book_borrowing_db");
-
 export const auth = betterAuth({
-  trustedOrigins: [
-    
-    "https://online-book-borrowing-platform-v1.vercel.app",
-  ],
-
+ trustedOrigins: [
+  "http://localhost:3001",
+  "https://online-book-borrowing-platform-v1.vercel.app",
+],
   database: mongodbAdapter(db, { client }),
 
   emailAndPassword: {

@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <div
       className="hero h
-    h-80  relative "
+    h-110  relative "
     >
       <Image
         src={HeroImage}
